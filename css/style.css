@@ -1,18 +1,87 @@
+
+/*----------------------------
+scroll_up ｜下から上へ出現
+----------------------------*/
+.scroll_up {
+    transition: 0.5s ease-in-out;
+    transform: translateY(30px);
+    opacity: 0;
+}
+  .scroll_up.on {
+    transform: translateY(0);
+    opacity: 1.0;
+}
+  
+/*----------------------------
+scroll_left ｜左から出現
+----------------------------*/
+.scroll_left {
+    -webkit-transition: 0.8s ease-in-out;
+    -moz-transition: 0.8s ease-in-out;
+    -o-transition: 0.8s ease-in-out;
+    transition: 0.8s ease-in-out;
+    transform: translateX(-30px);
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+}
+.scroll_left.on {
+    opacity: 1.0;
+    filter: alpha(opacity=300);
+    -moz-opacity: 1.0;
+    transform: translateX(0);
+}
+
+/*----------------------------
+scroll_right ｜右から出現
+----------------------------*/
+.scroll_right {
+    -webkit-transition: 0.8s ease-in-out;
+    -moz-transition: 0.8s ease-in-out;
+    -o-transition: 0.8s ease-in-out;
+    transition: 0.8s ease-in-out;
+    transform: translateX(30px);
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+}
+.scroll_right.on {
+    opacity: 1.0;
+    filter: alpha(opacity=300);
+    -moz-opacity: 1.0;
+    transform: translateX(0);
+}
+
+
 /* 共通================ */
 * {
     font-size: 30px;
     margin: 0px;
     padding: 0px;
-
 }
-
 body {
     font-family: "Sawarabi Gothic";
 }  
+.elm {
+    text-decoration: none;
+    background-color: #666666b0;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 20px;
+    color: #000000;
+    transition: 0.2s;
+    opacity: 0;
+}
 
 .h3-1 span {
+    margin-left: 50px;
     font-size: 38px;
     background: linear-gradient(transparent 70%, #FF7A00 80%);
+}
+
+blockquote {
+    margin-left: 50px;
 }
 
 .price {
@@ -25,7 +94,15 @@ body {
     font-size: 60px;
 }
 
+.pc-br {
+    display: inline;
+}
+
 .tb-br {
+    display: none;
+}
+
+.sp-br {
     display: none;
 }
 
@@ -44,22 +121,13 @@ body {
     left: 0px;
 }
 
-/* .h1-1 {
-    position: absolute;
-    font-size: 70px;
-    color: #FF7A00;
-    text-shadow: 5px 5px 2px #3a3a3a;
-    left: 40%;
-    top: 50%;
-} */
-
 .h1-1 {
     position: absolute;
     font-size: 10vw;
     font-family: "Nico Moji";
     /* font-size: 50px; */
     color: #ffffff;
-    text-shadow: 5px 5px 2px #e4f390;
+    text-shadow: 4px 4px 3px #e4f390;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -104,10 +172,6 @@ body {
 
 /* お問い合わせ================ */
 .contact-base {
-
-}
-
-.contact-btn{
 
 }
 
@@ -157,10 +221,14 @@ body {
         display: inline;
     }
 
+    .pc-br {
+        display: none;
+    }
 
     .tb-br {
         display: inline;
     }
+
     .price {
         background-color: rgba(255, 0, 0, 1);
         width: 100%;
@@ -186,17 +254,129 @@ body {
         margin: 0 auto;
     }
 
-
-
 }
 
 
 
 /* スマホ */
 @media screen and (max-width: 420px) {
-    .sp-br {
+    /* 共通================ */
+    * {
+        font-size: 14px;
+    }
+
+    .elm {
+
+        bottom: 15px;
+        right: 15px;
+        padding: 20px;
+        color: #000000;
+        transition: 0.2s;
+        opacity: 0;
+      }
+
+    .cont-pc {
         display: none;
     }
+
+    .cont-sp {
+        display: inline;
+    }
+
+    .pc-br {
+        display: none;
+    }
+    
+    .sp-br {
+        display: inline;
+    }
+
+    .h3-1 span {
+        margin-left: 20px;
+        font-size: 20px;
+        background: linear-gradient(transparent 70%, #FF7A00 80%);
+    }  
+
+    blockquote {
+        margin: 0 20px 0 20px;
+    }
+    
+    .sp-icon {
+        width: 10%;
+    }
+
+    .price {
+        background-color: rgba(255, 0, 0, 1);
+        width: 100%;
+        padding: 10px;
+        margin-top: -10px;
+    }
+    
+    .price span{
+        font-size: 20px;
+    }
+
+  /* ファーストビュー================ */
+    .logo {
+        position: absolute;
+        width: 25%;
+        left: 0px;
+    }
+    
+    /* キャッチコピー================ */
+    .catch-base {
+        margin-bottom: 50px;
+    }
+
+    .h2-1 {
+        font-size: 20px;
+    }
+
+        
+    /* コンテンツ================ */
+    .cnot-div-sp {
+        font-size: 14px;
+    }
+
+    /* お問い合わせ================ */
+    .contact-base {
+        margin-top: 30px;    
+    }
+
+    /* リンクサイト================ */
+    .sitelink-base {
+        background-color: rgb(37, 37, 37);
+        width: 85%;
+        margin: 30px auto;
+        padding: 20px;
+    }
+
+    .sitelink {
+        font-size: 18px;
+        text-decoration-line:none;
+        margin: 0 auto;
+    }
+
+    /* フッター================ */
+    .footer-base {
+        margin: 0;
+        padding: 20px;
+    }
+
+    .contactlink {
+        font-size: 14px;
+        text-decoration-line:none;
+        color: black;
+        margin: 0 auto;
+    }
+
+    .contact {
+        margin-bottom: 20px;
+        padding: 13px;
+        width: 80%;
+        text-align:center
+    }
+
 }
 
 
