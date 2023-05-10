@@ -3,12 +3,23 @@
     font-size: 30px;
     margin: 0px;
     padding: 0px;
-
 }
 
 body {
     font-family: "Sawarabi Gothic";
 }  
+
+.elm {
+    text-decoration: none;
+    background-color: #666666b0;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 20px;
+    color: #000000;
+    transition: 0.2s;
+    opacity: 0;
+  }
 
 .h3-1 span {
     margin-left: 50px;
@@ -200,6 +211,16 @@ blockquote {
     * {
         font-size: 14px;
     }
+
+    .elm {
+
+        bottom: 15px;
+        right: 15px;
+        padding: 20px;
+        color: #000000;
+        transition: 0.2s;
+        opacity: 0;
+      }
 
     .cont-pc {
         display: none;
