@@ -1,14 +1,67 @@
+
+/*----------------------------
+scroll_up ｜下から上へ出現
+----------------------------*/
+.scroll_up {
+    transition: 0.5s ease-in-out;
+    transform: translateY(30px);
+    opacity: 0;
+}
+  .scroll_up.on {
+    transform: translateY(0);
+    opacity: 1.0;
+}
+  
+/*----------------------------
+scroll_left ｜左から出現
+----------------------------*/
+.scroll_left {
+    -webkit-transition: 0.8s ease-in-out;
+    -moz-transition: 0.8s ease-in-out;
+    -o-transition: 0.8s ease-in-out;
+    transition: 0.8s ease-in-out;
+    transform: translateX(-30px);
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+}
+.scroll_left.on {
+    opacity: 1.0;
+    filter: alpha(opacity=300);
+    -moz-opacity: 1.0;
+    transform: translateX(0);
+}
+
+/*----------------------------
+scroll_right ｜右から出現
+----------------------------*/
+.scroll_right {
+    -webkit-transition: 0.8s ease-in-out;
+    -moz-transition: 0.8s ease-in-out;
+    -o-transition: 0.8s ease-in-out;
+    transition: 0.8s ease-in-out;
+    transform: translateX(30px);
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+}
+.scroll_right.on {
+    opacity: 1.0;
+    filter: alpha(opacity=300);
+    -moz-opacity: 1.0;
+    transform: translateX(0);
+}
+
+
 /* 共通================ */
 * {
     font-size: 30px;
     margin: 0px;
     padding: 0px;
 }
-
 body {
     font-family: "Sawarabi Gothic";
 }  
-
 .elm {
     text-decoration: none;
     background-color: #666666b0;
@@ -19,7 +72,7 @@ body {
     color: #000000;
     transition: 0.2s;
     opacity: 0;
-  }
+}
 
 .h3-1 span {
     margin-left: 50px;
@@ -74,7 +127,7 @@ blockquote {
     font-family: "Nico Moji";
     /* font-size: 50px; */
     color: #ffffff;
-    text-shadow: 5px 5px 2px #e4f390;
+    text-shadow: 4px 4px 3px #e4f390;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
