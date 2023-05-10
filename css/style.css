@@ -1,0 +1,203 @@
+/* 共通================ */
+* {
+    font-size: 30px;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+body {
+    font-family: "Sawarabi Gothic";
+}  
+
+.h3-1 span {
+    font-size: 38px;
+    background: linear-gradient(transparent 70%, #FF7A00 80%);
+}
+
+.price {
+    background-color: rgb(255, 0, 0);
+    width: 850px;
+    padding: 20px;
+}
+
+.price span{
+    font-size: 60px;
+}
+
+.tb-br {
+    display: none;
+}
+
+.cont-sp {
+    display: none;
+}
+
+/* ファーストビュー================ */
+.fast-base {
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    width: 10%;
+    left: 0px;
+}
+
+/* .h1-1 {
+    position: absolute;
+    font-size: 70px;
+    color: #FF7A00;
+    text-shadow: 5px 5px 2px #3a3a3a;
+    left: 40%;
+    top: 50%;
+} */
+
+.h1-1 {
+    position: absolute;
+    font-size: 10vw;
+    font-family: "Nico Moji";
+    /* font-size: 50px; */
+    color: #ffffff;
+    text-shadow: 5px 5px 2px #e4f390;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+.wrap {
+    font-size: 12vw;
+    color: #ffa600;
+}
+
+/* キャッチコピー================ */
+.catch-base {
+    margin-bottom: 160px;
+}
+
+.h2-1 {
+    font-size: 46px;
+}
+
+/* コンテンツ1================ */
+.cont-1 {
+    position: relative;
+    z-index: -1;
+    margin-top: -450px;
+}
+
+/* コンテンツ2================ */
+.cont-2 {
+    position: relative;
+    z-index: -1;
+    margin-top: -500px;
+}
+
+/* コンテンツ3================ */
+.cont-3 {
+    position: relative;
+    z-index: -1;
+    margin-top: -900px;
+}
+
+/* お問い合わせ================ */
+.contact-base {
+
+}
+
+.contact-btn{
+
+}
+
+/* リンクサイト================ */
+.sitelink-base {
+    background-color: rgb(37, 37, 37);
+    width: 50%;
+    margin: 70px auto;
+    padding: 20px;
+}
+
+.sitelink {
+    font-size: 40px;
+    text-decoration-line:none;
+    margin: 0 auto;
+}
+
+/* フッター================ */
+.footer-base {
+    margin: 0;
+    padding: 20px;
+}
+
+.contactlink {
+    font-size: 20px;
+    text-decoration-line:none;
+    color: black;
+    margin: 0 auto;
+}
+
+.contact {
+    background-color: rgb(207, 207, 207);
+    padding: 20px;
+    width: 50%;
+    text-align:center
+}
+
+/* タブレット */
+
+@media only screen and (min-width: 421px) and (max-width: 960px) {
+    /* 共通================ */
+    .cont-pc {
+        display: none;
+    }
+
+    .cont-sp {
+        display: inline;
+    }
+
+
+    .tb-br {
+        display: inline;
+    }
+    .price {
+        background-color: rgba(255, 0, 0, 1);
+        width: 100%;
+        padding: 15px;
+        margin-top: -10px;
+    }
+    
+    .price span{
+        font-size: 35px;
+    }
+
+    /* リンクサイト================ */
+    .sitelink-base {
+        background-color: rgb(37, 37, 37);
+        width: 50%;
+        margin: 70px auto;
+        padding: 20px;
+    }
+
+    .sitelink {
+        font-size: 25px;
+        text-decoration-line:none;
+        margin: 0 auto;
+    }
+
+
+
+}
+
+
+
+/* スマホ */
+@media screen and (max-width: 420px) {
+    .sp-br {
+        display: none;
+    }
+}
+
+
+
