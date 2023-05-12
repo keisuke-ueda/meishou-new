@@ -63,6 +63,8 @@ body {
     font-family: "Sawarabi Gothic";
 }  
 .elm {
+    position: fixed;
+    z-index: 10;
     text-decoration: none;
     background-color: #666666b0;
     position: fixed;
